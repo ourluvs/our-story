@@ -1,0 +1,52 @@
+:root {
+    --color-text: #222222;
+    --color-muted: #767676;
+    --color-link: #0070f3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text);
+}
+
+main {
+    flex: 1;
+}
+
+a {
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    a {
+        transition: none;
+    }
+}
+
+a:hover,
+a:active {
+    color: var(--color-link);
+    text-decoration: underline;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--color-link);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
